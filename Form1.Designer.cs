@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.rdbGrados = new System.Windows.Forms.RadioButton();
             this.rdbRadianes = new System.Windows.Forms.RadioButton();
             this.txtbIntro = new System.Windows.Forms.TextBox();
@@ -42,6 +43,8 @@
             this.btnMultiplicar = new System.Windows.Forms.Button();
             this.btnIntro = new System.Windows.Forms.Button();
             this.btnSeno = new System.Windows.Forms.Button();
+            this.errorProviderTxtb = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTxtb)).BeginInit();
             this.SuspendLayout();
             // 
             // rdbGrados
@@ -186,6 +189,10 @@
             this.btnSeno.Text = "Sen";
             this.btnSeno.UseVisualStyleBackColor = true;
             // 
+            // errorProviderTxtb
+            // 
+            this.errorProviderTxtb.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -207,6 +214,7 @@
             this.Controls.Add(this.rdbGrados);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTxtb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,6 +236,7 @@
         private System.Windows.Forms.Button btnMultiplicar;
         private System.Windows.Forms.Button btnIntro;
         private System.Windows.Forms.Button btnSeno;
+        private System.Windows.Forms.ErrorProvider errorProviderTxtb;
     }
 }
 
