@@ -43,5 +43,41 @@ namespace FormMultidimensionalesG4
                 errorProviderTxtb.SetError(txtbIntro, error.Message);
             }
         }
+
+        private void btnSuma_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(  txtbIntro.Text.Contains(";") )
+                {
+                    m2 = Multidimensional.Leer(txtbIntro.Text);
+                    lbMatriz2.Text = m2.ToString();
+                    m3 = m1 + m2;
+                    lbResultado.Text = m3.ToString();
+                }
+                else
+                {
+                    u2 = Unidimensional.Leer(txtbIntro.Text);
+                    lbMatriz2.Text = u2.ToString();
+                    u3 = u1 + u2;
+                    lbResultado.Text = u3.ToString();
+                }
+
+            }
+            catch(FormatException error)
+            {
+                errorProviderTxtb.SetError(txtbIntro, error.Message);
+
+            }
+            catch(NullReferenceException error)
+            {
+                errorProviderTxtb.SetError(txtbIntro, error.Message);
+            }
+            catch(Exception error)
+            {
+                errorProviderTxtb.SetError(txtbIntro, error.Message);
+            }
+
+        }
     }
 }
