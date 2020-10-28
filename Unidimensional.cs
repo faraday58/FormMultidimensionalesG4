@@ -1,4 +1,4 @@
-﻿
+﻿using System;
 namespace FormMultidimensionalesG4
 {
     class Unidimensional : Matriz
@@ -32,6 +32,15 @@ namespace FormMultidimensionalesG4
             }
             return u3;
         } 
+
+       public static Unidimensional Seno(Unidimensional u1, bool grados)
+        {
+            for( int i=0; i < u1.N; i++)
+            {
+                u1.A[i] =(float)Math.Sin(u1.A[i]);
+            }
+            return u1;
+        }
 
 
         public override string ToString()
