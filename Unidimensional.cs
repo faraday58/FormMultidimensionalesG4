@@ -34,8 +34,6 @@ namespace FormMultidimensionalesG4
         } 
 
 
-
-
         public override string ToString()
         {
             string A = "";
